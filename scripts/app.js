@@ -38,7 +38,7 @@ startBtn.addEventListener('click', () => {
 });
 
 configBtn.addEventListener('click', () => {
-  prompt('Configuration');
+  alert('Configuration is disabled.');
 });
 
 function GetRandom(min, max) {
