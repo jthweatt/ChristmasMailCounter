@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santa Mail Counter</title>
+    <link rel="icon" type="image/x-icon" href="./bin/hat.png" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/flipclock.css" />
+    <link rel="stylesheet" href="./styles/snow.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax\libs\font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="countdown-sign">
+        <h2>Days Until Christmas</h2>
+        <div class="flipclock" id="flipclock"></div>
+      </div>
+      <div class="mail">
+        <h1>Letters to Santa Received</h1>
+        <div class="envelope">
+          <h2 class="counter">0</h2>
+        </div>
+      </div>
+      <div class="snow"></div>
+      <div class="controls">
+        <div class="buttons">
+          <button class="start-btn btn"><i class="fa fa-play"></i></button>
+          <button class="stop-btn btn"><i class="fa fa-stop"></i></button>
+          <button class="reset-btn btn"><i class="fa fa-refresh"></i></button>
+          <button class="config-btn btn"><i class="fa fa-gear"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/flipclock.js"></script>
+  </body>
+</html>
