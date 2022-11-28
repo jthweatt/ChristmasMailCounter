@@ -2,8 +2,15 @@ const counterHeading = document.querySelector('.counter');
 const resetBtn = document.querySelector('.reset-btn');
 const stopBtn = document.querySelector('.stop-btn');
 const startBtn = document.querySelector('.start-btn');
+const configBtn = document.querySelector('.config-btn');
 
-let counter = 1000000000;
+// Config vars
+let startCount = 1000;
+let timeInterval = 1000;
+let rndMin = 0;
+let rndMax = 0;
+
+let counter = startCount;
 let interval = null;
 counterHeading.textContent = FormatNumber(counter);
 
@@ -11,7 +18,7 @@ console.log('app loaded.');
 
 resetBtn.addEventListener('click', () => {
   // console.log('reset working.');
-  counter = 1234567890;
+  counter = startCount;
   counterHeading.textContent = FormatNumber(counter);
 });
 
@@ -20,13 +27,19 @@ stopBtn.addEventListener('click', () => {
 });
 
 startBtn.addEventListener('click', () => {
+  clearInterval(interval);
   interval = window.setInterval(() => {
-    counter += GetRandom(100, 199999999);
+    if (counter > 1400000000) {
+      counter = startCount;
+    }
+    counter += GetRandom(100, 9999999);
     counterHeading.textContent = FormatNumber(counter);
-  }, 1000);
+  }, timeInterval);
 });
 
-startBtn;
+configBtn.addEventListener('click', () => {
+  prompt('Configuration');
+});
 
 function GetRandom(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;

@@ -1,0 +1,10 @@
+style
+- Style control buttons for hover and disable.
+
+function
+- Build config form and popout.
+- Map variables from config to coorspnding locations is app.js
+- Test counter at different speed intervals.
+
+push
+- Heroku?
