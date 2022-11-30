@@ -187,7 +187,7 @@
 
   // FlipClock Christmas
   new FlipClock(document.getElementById('flipclock'), {
-    endDate: new Date(currentYear, 11, 24),
+    endDate: new Date(currentYear, 11, 25),
     labels: {
       days: 'Days',
       hours: 'Hours',
